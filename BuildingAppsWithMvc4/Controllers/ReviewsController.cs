@@ -12,7 +12,10 @@ namespace BuildingAppsWithMvc4.Controllers
         // GET: Reviews
         public ActionResult Index()
         {
-            return View();
+            var model = from r in _reviews
+                        orderby r.Country
+                        select r;
+            return View(model);
         }
 
         // GET: Reviews/Details/5
