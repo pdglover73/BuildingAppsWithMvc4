@@ -29,5 +29,7 @@ namespace BuildingAppsWithMvc4.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BuildingAppsWithMvc4.Models.RestaurantReview> RestaurantReviews { get; set; }
     }
 }
